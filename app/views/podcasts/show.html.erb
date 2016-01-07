@@ -27,7 +27,7 @@
 			<div id="episodes">
 				<div class="wrapper_skinny">
 						<ul class="cf">
-							
+							<% @episode.each do |episode| %>
 							<li class="cf">
 							<div class="episode_thumbnail">
 								<a href="#">
@@ -35,73 +35,12 @@
 								</a>
 							</div>
 							<div class="episode_overview">
-								<h2>
-									<a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a>
-								</h2>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a pellentesque tortor. Vivamus volutpat neque vitae orci sodales, nec rhoncus ex volutpat. Sed augue tortor, elementum et mi non, efficitur euismod lacus. Ut vel cursus erat.
-								</p>
+								<h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+								<p class="description"><%= truncate(episode.description, length: 160 )%></p>
 							</div>
 						</li>
 						
-													<li class="cf">
-							<div class="episode_thumbnail">
-								<a href="#">
-								<img src>
-								</a>
-							</div>
-							<div class="episode_overview">
-								<h2>
-									<a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a>
-								</h2>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a pellentesque tortor. Vivamus volutpat neque vitae orci sodales, nec rhoncus ex volutpat. Sed augue tortor, elementum et mi non, efficitur euismod lacus. Ut vel cursus erat.
-								</p>
-							</div>
-						</li>
-						
-													<li class="cf">
-							<div class="episode_thumbnail">
-								<a href="#">
-								<img src>
-								</a>
-							</div>
-							<div class="episode_overview">
-								<h2>
-									<a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a>
-								</h2>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a pellentesque tortor. Vivamus volutpat neque vitae orci sodales, nec rhoncus ex volutpat. Sed augue tortor, elementum et mi non, efficitur euismod lacus. Ut vel cursus erat.
-								</p>
-							</div>
-						</li>
-						
-													<li class="cf">
-							<div class="episode_thumbnail">
-								<a href="#">
-								<img src>
-								</a>
-							</div>
-							<div class="episode_overview">
-								<h2>
-									<a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a>
-								</h2>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a pellentesque tortor. Vivamus volutpat neque vitae orci sodales, nec rhoncus ex volutpat. Sed augue tortor, elementum et mi non, efficitur euismod lacus. Ut vel cursus erat.
-								</p>
-							</div>
-						</li>
-						
-													<li class="cf">
-							<div class="episode_thumbnail">
-								<a href="#">
-								<img src>
-								</a>
-							</div>
-							<div class="episode_overview">
-								<h2>
-									<a href="#">How to Pull Off 12 (Well Executed) Startups in 12 Months</a>
-								</h2>
-								<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean a pellentesque tortor. Vivamus volutpat neque vitae orci sodales, nec rhoncus ex volutpat. Sed augue tortor, elementum et mi non, efficitur euismod lacus. Ut vel cursus erat.
-								</p>
-							</div>
-						</li>
+												
 						
 					</ul>
 				</div>

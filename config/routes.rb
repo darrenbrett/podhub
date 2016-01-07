@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 root 'welcome#index'
 
   
-  resources :podcasts, only: [:index, :show]
+  resources :podcasts, only: [:index, :show] do
+    resources :episodes
+  end
 
 end
