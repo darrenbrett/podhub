@@ -29,7 +29,7 @@
 		
 		<div id="episode_content">
 			<div class="wrapper_skinny">
-				<img src=" ">
+				<%= image_tag @episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
 				<h2>How to Pull Off 12 (Well Executed) Startuos in 12 Months</h2>
 				<p class="description">
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie in neque viverra pretium. Proin ultricies mauris et augue lacinia ullamcorper. Curabitur iaculis at magna vel pellentesque. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam posuere arcu facilisis risus cursus suscipit. Maecenas dapibus ipsum ut tristique eleifend. Fusce vitae quam vitae massa rhoncus finibus ut vel erat. Proin pretium tincidunt purus, nec condimentum urna posuere vitae. Donec eu faucibus nulla, et mattis est. Ut varius est vitae dolor maximus, id blandit lacus ullamcorper.
@@ -45,7 +45,7 @@
 					<li class="cf">
 					<div class="episode_thumbnail">
 						<a href="#">
-						<img src>
+						<%= image_tag @episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
 						</a>
 					</div>
 					<div class="episode_overview">

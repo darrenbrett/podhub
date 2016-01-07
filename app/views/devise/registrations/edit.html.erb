@@ -36,8 +36,8 @@
 		  </div>
 		
 		  <div class="field">
-		    <%= f.label :email %><br />
-		    <%= f.email_field :email %>
+		    <%= f.label :thumbnail %><br />
+		    <%= f.file_field :thumbnail %>
 		  </div>
 		
 		  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
