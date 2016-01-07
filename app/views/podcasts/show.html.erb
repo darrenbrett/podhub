@@ -8,7 +8,7 @@
 				<% end %>
 				
 				<% unless @podcast.stitcher.blank? %>
-				<a href="<%= @podcast.sticher %>" class="subscribe_link">Stitcher</a>
+				<a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
 				<% end %>
 				
 				<% unless @podcast.podbay.blank? %>
@@ -21,13 +21,16 @@
 			<%= link_to podcasts_path do %>
 					All Podcasts
 					<span>/</span>
-					The Rocketship Podcast
-				</a></div>
+					<%= link_to @podcast.title, podcast_path(@podcast) %>
+					<span>/</span>
+					<%= @episode.title %>
+				<% end %>
+				</div>
 				
 			<div id="episodes">
 				<div class="wrapper_skinny">
 						<ul class="cf">
-							<% @episode.each do |episode| %>
+							<% @episodes.each do |episode| %>
 							<li class="cf">
 							<div class="episode_thumbnail">
 								<a href="#">
@@ -39,7 +42,7 @@
 								<p class="description"><%= truncate(episode.description, length: 160 )%></p>
 							</div>
 						</li>
-						
+				<% end %>		
 												
 						
 					</ul>
@@ -47,9 +50,4 @@
 			</div>
 		</div>
 		
-					<div class="pagination">
-				<span class="previous_page disabled">Previous</span>
-				<em class="current">1</em>
-				<a href="#">2</a>
-				<a class="next_page" href="#">Next</a>
-			</div>
+				

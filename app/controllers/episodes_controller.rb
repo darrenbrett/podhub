@@ -5,20 +5,20 @@ class EpisodesController < ApplicationController
   def new
     @episode = @podcast.episodes.new
   end
-  
-  def show
-    @episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").reject { |e| e.id == @episode.id }
-  end
-  
-  
+    
   def create
-    @episide = @podcast.episodes.new eposide_params
+    @episode = @podcast.episodes.new episode_params
     if @episode.save
       redirect_to podcast_episode_path(@podcast, @episode)
     else
       render 'new'
     end
   end
+  
+  def show
+    @episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").reject { |e| e.id == @episode.id }
+  end
+  
   
   private
   
